@@ -1,0 +1,21 @@
+# = DONE
+(GRAPHICS)
+- Blender3D for head
+- Suit overlay for body
+
+(CODE)
+SEE main.lua
+
+* needs balancing
+
+- Press enter to reduce hp in exchange for luck pennies (should probably be item)
+
+- Higher luck stat initates effects more frequently:
+    - Stomping mom using kims voice
+    - Spawning a lucky coin
+    - (-1 * luck) from consumables (Bombs,Keys,other stuff)
+    - spawn a random enemy
+    - spawn a random item
+        - item tier is based on luck (higher the luck the bigger the range of tier items)
+    - spawn a boss
+        - higher the luck, the worse the boss

@@ -1,0 +1,12 @@
+### SAUL
+Luck Char - 
+snowballs with luck items
+
+Starts with lowest luck, but random chance for lucky coin drops
+start with perfection trinket? (test runs)
+
+Cursed shovel effect also comes into play at high luck levels, so the higher your luck is, the more often she drops her foot
+stomp should use kim voice lines
+
+100 luck is like 100% for every item effect
+luck would need to be used like a resource - spent for reduced risk, but wanted for better deals and stuff

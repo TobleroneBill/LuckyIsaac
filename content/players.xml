@@ -1,0 +1,9 @@
+<players root="gfx/characters/costumes/" portraitroot="gfx/ui/stage/" nameimageroot="gfx/ui/boss/">
+
+<player id="0" name="Saul" skin="Faustus.png" 
+hp="12" bombs="0" 
+trinket="145"
+items="46"
+nameimage="PlayerName_01_Isaac.png" portrait="PlayerPortrait_01_Isaac.png" bigportrait="PlayerPortraitBig_01_Isaac.png" skinColor="-1" birthright="not done"/>
+
+</players>
