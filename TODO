@@ -19,3 +19,33 @@ SEE main.lua
         - item tier is based on luck (higher the luck the bigger the range of tier items)
     - spawn a boss
         - higher the luck, the worse the boss
+
+
+
+
+
+
+-- TODO:
+--  Lucky Coin
+--      Item that scales with luck and produces lucky coins randomly depending on players luck stat
+-- Luck Pill
+    -- Invert luck
+-- Luck machine
+    -- spend 1 luck for a chance to get 2
+        -- possible tier 1 item ? idk
+-- TODO: Depending on luck stat, this will apply a range of effects on a timer that also scales with luck
+--  Under 0 luck
+--      mom Stomp
+--      Random enemy spawn
+--      Tier4 item spawn
+--      Troll bomb spawn
+--  0-50 luck
+--      item spawn tiers include all tiers
+--      random champion spawn
+-- 50-100 luck
+--      Random boss spawn
+--  100+ luck
+--      randomly explode
+--      multiple effects can apply at once
+--      timer random
+--      Saul theme plays because your slippin jimmy
