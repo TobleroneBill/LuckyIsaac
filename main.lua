@@ -25,6 +25,14 @@ local SaulStats = {
 -- spawn mom foot
 local function RngStomp()
     print('Stomps')
+    Isaac.Spawn(
+        EntityType.ENTITY_EFFECT,
+        EffectVariant.MOM_FOOT_STOMP,
+        0,
+        IsaacPlayer.Position,
+        Vector(0,0),
+        nil
+    )
 end
 
 local function RngEnemy()
@@ -43,7 +51,8 @@ local RNGCollectables = {
 
 local function RngItemSpawn()
     print('Item Spawn')
-    Isaac.Spawn(EntityType.ENTITY_PICKUP,RNGCollectables[math.random(1,#RNGCollectables)],0,Game():GetRoom():FindFreePickupSpawnPosition(Game():GetRoom():GetRandomPosition(1.0)),
+    Isaac.Spawn(EntityType.ENTITY_PICKUP,RNGCollectables[math.random(1,#RNGCollectables)],0,
+    Game():GetRoom():FindFreePickupSpawnPosition(Game():GetRoom():GetRandomPosition(1.0)),
     Vector(0,0), nil)
 end
 
@@ -54,41 +63,22 @@ local function RngTrollBomb()
     Vector(0,0), nil)
 end
 
-local RngDict =  {
+local RngDict0LUCK =  {
     [1] = RngStomp,
     [2] = RngEnemy,
     [3] = RngItemSpawn,
     [4] = RngTrollBomb
 }
 
-local function Rng_0Luck()
-    local RNGCHACE = math.random(IsaacPlayer.Luck,100)
-    print(RNGCHACE)
-    -- print(100 + IsaacPlayer.Luck)
-    -- if RNGCHACE > 70 then
-    local RNGCHOICE = math.random(1,#RngDict)
-    RngDict[RNGCHOICE]()    -- do random thing
-    -- end
-end
-
-
 local function RNGEffect()
-    -- Less than 0 effects
-    if IsaacPlayer.Luck < 0 then
-        -- print('Luck is less than 0')
-        Rng_0Luck()
-
-    elseif IsaacPlayer.Luck > 0 and IsaacPlayer.Luck < 50 then
-        -- print('Luck is between 0-50')
-    elseif IsaacPlayer.Luck >= 50 and IsaacPlayer.Luck < 100 then
-        -- print('Luck is between 50-100')
-    elseif IsaacPlayer.Luck >= 100 then
-        -- print('Luck is between 100+')
+    local RNGCHACE = math.random(IsaacPlayer.Luck,200) + IsaacPlayer.Luck
+    print('Roll' .. tostring(RNGCHACE))
+    -- RNGChance = 0-100 - 100
+    if RNGCHACE > 50 then
+        local RNGCHOICE = math.random(1,#RngDict0LUCK)
+        RngDict0LUCK[RNGCHOICE]()    -- do random thing  
     end
-
 end
-
-
 
 function mod:EvalCache(player,Cache)
     if player:GetName() == 'Saul' then
